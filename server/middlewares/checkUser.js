@@ -28,7 +28,6 @@ const checkUserLogin = async (req, res, next) => {
     }
     next();
   } catch (error) {
-    console.log(error.message);
     res.status(500).json({ status: 500, error: error.message });
   }
 };
@@ -38,8 +37,6 @@ const checkUserFavoriteArticle = async (req, res, next) => {
   const _id = req.params.article_id;
   try {
     const article = await Article.findOne({ _id });
-    console.log('user', user);
-    console.log('article.user', article.user);
     if (article.user == user) {
       return res.status(401).json({
         status: 401,

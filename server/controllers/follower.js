@@ -38,8 +38,6 @@ class FollowerController {
             unFollow => unFollow.user.toString() == user
           )
         );
-        console.log('myFollowings', myFollowings);
-        console.log('unFollowUser', unFollowUser);
         if (unFollowUser) {
           await Followers.findByIdAndDelete(unFollowUser.id);
           return res.status(200).json({
