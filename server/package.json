@@ -29,7 +29,7 @@
     "mongoose": "^5.6.5",
     "nodemailer": "^6.3.1",
     "passport-jwt": "^4.0.0",
-    "validator": "^11.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "dotenv": "^8.0.0",
